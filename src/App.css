@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+
+body {
+	margin: 0;
+	background: #000;
+	color: #fff;
+}
+
+nav {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	min-height: 50px;
+}
+
+.logo {
+	font: 400 2rem 'Righteous', cursive;
+	color: purple;
+	padding-left: 1rem;
+}
+
+.different-color {
+	color: #fff;
+}
+
+ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 30%;
+	margin: 0;
+	padding-top: 6px;
+}
+
+@media (max-width: 768px) {
+	ul {
+		display: none;
+	}
+}
+
+li {
+	width: 33%;
+	list-style: none;
+	font: 300 1rem verdana;
+}
+
+li:hover {
+	color: purple;
+	transition: .2s;
+	cursor: pointer;
+}
+
+.user {
+	position: absolute;
+	right: 2rem;
+	height: 100%;
+}
+
+.user img {
+	width: 50px;
+}
+
+.dropdown-icon img {
+	position: absolute;
+	right: .5rem;
+	width: 10px;
+	cursor: pointer;
+}
+
+.main-movie {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	background: rgb(18, 20, 19);
+}
+
+.main-movie img{
+	width: 62%;
+}
+
+.movie-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
+	font: 200 .85rem verdana;
+	opacity: .9;
+}
+
+@media (max-width: 768px) {
+	.main-movie {
+		flex-direction: column;
+	}
+	
+	.main-movie img{
+		width: 100%;
+	}
+	
+	.movie-content {
+		text-align: justify;
+	}
+}
+
+h2 {
+	padding: 0 1rem;
+	font: 400 1.25rem 'Righteous', cursive;
+}
+
+.container-slide {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.carrossel-item {
+	position: relative;
+	width: 24.5%;
+}
+
+.info {
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 98%;
+	margin: 0;
+	font: 700 1.25rem verdana;
+	text-align: center;
+	background: #FFFFFF96;
+	color: purple;
+	opacity: 0;
+	z-index: 2;
+}
+
+.info:hover {
+	opacity: 1;
+	transition: .2s;
+}
+
+.carrossel-item img{
+	width: 100%;
+	height: 140px;
+	object-fit: fill;
+	border-radius: 4px;
+}
+
+.slideItems {
+	position: relative;
+	display: none;
+	padding: 0 1rem;
+}
+
+@media (max-width: 550px) {
+	.carrossel-item {
+		width: 100%;
+	}
+	
+	.carrossel-item img {
+		height: 250px;
+	}
+}
+
+.buttons-box {
+	position: absolute;
+	top: 42%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.previous, .next {
+	font-size: 2rem;
+	border: none;
+	border-radius: 8px;
+	color: purple;
+	background: #ffffff50;
+	outline: none;
+	cursor: pointer;
+	z-index: 5;
+}
